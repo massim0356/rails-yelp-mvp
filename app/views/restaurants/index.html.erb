@@ -1,0 +1,15 @@
+<h1>Restaurants#index</h1>
+<%= link_to 'Make a new Restaurant', 'restaurants/new'  %>
+<div class="cards">
+  <% @restaurants.each do |restaurant| %>
+  <div class="card-product">
+    <%= image_tag "https://source.unsplash.com/400x400/?#{restaurant.category}" %>
+    <div class="card-product-infos">
+      <h2><%= restaurant.name %></h2>
+      <p><%= restaurant.address %></p>
+      <%= link_to "See details", restaurant_path(restaurant), class: "btn btn-sm btn-primary"%>
+    </div>
+    </div>
+  <% end %>
+</div>
+
